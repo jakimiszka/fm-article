@@ -108,10 +108,10 @@ html, body{
 @media (max-width: 1000px) {
     .card{
         min-width: 60%;
-        min-height: 50%;
+        height: 65%;
     }    
     .details{
-        justify-content: space-between;
+        justify-content: space-around;
     }
 }
 
@@ -124,11 +124,9 @@ html, body{
     .card{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 2fr;
-
         width: 80%;
-        min-width: 270px;
+        min-width: 300px;
         max-width: 80%;
-
         height: auto;
         max-height: 90%;
     }
@@ -142,5 +140,38 @@ html, body{
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         border-bottom-left-radius: 0;
+    }
+}
+
+@media (max-width: 250px){
+    .card{
+        width: 95%;
+        min-width: unset;
+        min-height: 250px;
+        margin: 0 2.5%;
+    }
+    .details{
+        margin: 0.8rem;
+        gap: 0.5rem;
+        justify-content: space-around;
+    }
+    .title{
+        font-size: 14px;
+        line-height: 1.2;
+    }
+    .description{
+        font-size: 10px;
+        line-height: 1.3;
+    }
+    .socials{
+        margin-top: 0.5rem;
+    }
+    .avatar{
+        width: 25px;
+        height: 25px;
+    }
+    .share_btn{
+        width: 25px;
+        height: 25px;
     }
 }
