@@ -38,7 +38,8 @@ html, body{
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
     min-width: 730px;   
-    width: 40%;
+    width: 50%;
+    height: auto;
     min-height: 280px;
     border-radius: 10px;
     background-color: white ;
@@ -48,7 +49,6 @@ html, body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
 .title{
     font-size: var(--fs-1);
@@ -103,4 +103,44 @@ html, body{
 .share_btn > img{
     width: 20px;
     height: 20px;
+}
+
+@media (max-width: 1000px) {
+    .card{
+        min-width: 60%;
+        min-height: 50%;
+    }    
+    .details{
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 600px) {
+    .container{
+        justify-items: center;
+        align-items: flex-start;
+        margin-top: 2rem;
+    }
+    .card{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+
+        width: 80%;
+        min-width: 270px;
+        max-width: 80%;
+
+        height: auto;
+        max-height: 90%;
+    }
+    .details{
+        margin: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .pictrue{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
 }
