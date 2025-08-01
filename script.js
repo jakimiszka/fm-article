@@ -1,54 +1,12 @@
-const shareBtn = document.querySelector('.share_btn');
+const share_btn = document.querySelector(".share_btn");
+const toast = document.querySelector(".toast_desktop");
 
-shareBtn.addEventListener('click', (e) => {
-    const socials = document.querySelector('.socials');
-    const toast = document.querySelector('.toast');
-    const toastMobile = document.querySelector('.toast_mobile');
-    const person = document.querySelector('.person');
-    
-    if (window.innerWidth <= 600) {
-        if (person.style.display === 'none' || person.style.display === '') {
-            person.style.display = 'flex';
-            toastMobile.style.display = 'none';
-            socials.style.backgroundColor = 'white';
-        } else {
-            person.style.display = 'none';
-            toastMobile.style.display = 'flex';
-            socials.style.backgroundColor = 'var(--color-grey-900)';
-        }
+share_btn.addEventListener('click', function() {
+    if (toast.getAttribute('data-active') === 'false') {
+      toast.style.display = 'flex';
+      toast.setAttribute('data-active', 'true');
     } else {
-        const visibility = toast.style.display;
-        if(visibility === "none"){
-            toast.style.display = "block";
-        }else {
-            toast.style.display = "none";
-        }
+      toast.style.display = 'none';
+      toast.setAttribute('data-active', 'false');
     }
-});
-
-// Listen for window resize to handle view changes
-// window.addEventListener('resize', () => {
-//     const socials = document.querySelector('.socials');
-//     const toastMobile = document.querySelector('.toast_mobile');
-//     const person = document.querySelector('.person');
-//     const toast = document.querySelector('.toast');
-
-//     if (window.innerWidth <= 600) {
-//         const visibility = toast.style.display;
-//         // if(visibility === "none"){
-//         //     toast.style.display = "block"
-//         //     socials.style.backgroundColor = 'var(--color-grey-900)';
-//         // }else {
-//         //     toast.style.display = "none";
-//         //     socials.style.backgroundColor = 'white';
-//         // }
-//     }
-    
-//     if (window.innerWidth > 600) {
-//         // Reset mobile elements when switching to desktop
-//         socials.style.backgroundColor = 'white';
-//         person.style.display = '';
-//         toastMobile.style.display = '';
-//         toast.style.display = 'none';
-//     }
-// });
+  });

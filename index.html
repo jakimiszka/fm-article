@@ -9,7 +9,6 @@
   <title>Frontend Mentor | Article preview component</title>
 </head>
 <body>
-  <div class="container">
     <div class="card">
         <img class="pictrue" src="./images/drawers.jpg" alt="drawers"/>
         <div class="details">
@@ -23,14 +22,6 @@
               to help you make any room feel complete.
             </p>
             <div class="socials">
-              <div class="toast_mobile">
-                <div class="links">
-                    <div class="share">SHARE</div>
-                    <img src="./images/icon-facebook.svg" alt="fb"/>
-                    <img src="./images/icon-twitter.svg" alt="twitter"/>
-                    <img src="./images/icon-pinterest.svg" alt="pinterest"/>
-                </div>
-              </div>
               <div class="person">
                 <img class="avatar" src="./images/avatar-michelle.jpg" alt="avatar"/>
                 <div class="info">
@@ -38,13 +29,20 @@
                   <p class="date">28 Jun 2020</p>
                 </div>
               </div>
-               <button class="share_btn"> 
-                  <img src="./images/icon-share.svg" alt="btn"/>
-               </button>
+              <button class="share_btn"> 
+                <img src="./images/icon-share.svg" alt="btn"/>
+              </button>
+            </div>
+            <div class="toast_desktop hidden" data-active="false">
+                <div class="share">SHARE</div>
+                <img src="./images/icon-facebook.svg" alt="fb" />
+                <img src="./images/icon-twitter.svg" alt="twitter" />
+                <img src="./images/icon-pinterest.svg" alt="pinterest" />
+              <div class="arrow"></div>
             </div>
         </div>
+        
     </div>
-  </div>
   <script defer src="./script.js"></script>
 </body>
 </html>
