@@ -156,30 +156,13 @@ body {
     display: none;
   }
 
-/* @media (max-width: 1000px) {
-  .card {
-    min-width: 70%;
-    min-height: 70%;
-  }
-  .details {
-    justify-content: space-around;
-  }
-  .toast_desktop{
-    
-  }
-} */
-
 @media (max-width: 600px) {
   .container {
     justify-items: center;
     align-items: flex-start;
     margin-top: 2rem;
   }
-  .pictrue {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 0;
-  }
+  
   .card {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr;
@@ -190,6 +173,14 @@ body {
     max-height: 90%;
     z-index: 1;
   }
+
+  .pictrue {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+    max-width: 100%;
+  }
+  
   .details {
     display: flex;
     flex-direction: column;
